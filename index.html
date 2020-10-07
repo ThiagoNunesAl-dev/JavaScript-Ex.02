@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JavaScript02</title>
+</head>
+<body>
+    <h1>Exercício 2</h1>
+    <hr>
+    <h2 class="txt">Entre com o seu e-mail.</h2>
+    <div class="formulario">
+        <form id="form">
+            <input type="text" name="Email" id="Email" required>
+            <button type="submit" id="btn">ENTRAR</button>
+        </form>
+
+        <script>
+            var Email = document.getElementById("Email");
+            console.log(Email);
+
+            var btn = document.getElementById("btn");
+            console.log(btn);
+
+            btn.addEventListener("click", function(event){
+                event.preventDefault();
+
+                console.log(Email.value);
+                if(Email.value.includes("@") === true){
+                    alert("Email cadastrado!")
+                } else {
+                    alert("Email inválido!");
+                }
+            })
+        </script>
+    </div>
+</body>
+</html>
